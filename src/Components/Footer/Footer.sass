@@ -1,0 +1,87 @@
+@use "../../Styles/variables" as vars
+
+.footer
+    background: vars.$black
+    color: vars.$white
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 2rem 4rem
+
+    &__main
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+
+        @media (max-width: 768px)
+            flex-direction: column
+            gap: 2rem
+
+    &__nav-link
+        list-style: none
+        margin-bottom: 9px
+
+    &__faq-link
+        list-style: none
+        margin-bottom: 9px
+       
+        a
+            color: vars.$white
+            text-decoration: none
+    
+    // Contact
+    &__contact-title
+        margin-bottom: 12px
+        font-size: 18px
+
+    &__contact-item
+        margin-bottom: 9px
+
+    &__contact-address
+        font-weight: bold
+        margin-bottom: 8px
+
+    &__contact-phone
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 1rem
+
+        svg
+            font-size: 1.25rem
+        
+    // Social Media
+    &__social-media
+        display: flex
+        flex-direction: row
+        gap: 1rem
+        margin-top: 12px
+
+        a
+            color: vars.$white
+            font-size: 1.5rem
+            text-decoration: none
+    
+    // Break line
+    &__break-line
+        width: 100%
+        height: 1px
+        background: vars.$gray
+        margin-top: 2rem
+
+    // Payments
+    &__payments
+        margin-top: 1rem
+    
+    &__payments-methods
+        display: flex
+        flex-direction: row
+        gap: 1rem
+        margin-bottom: 0.5rem
+
+        svg
+            font-size: 3rem
+
+        
+        

@@ -1,0 +1,31 @@
+@use "../../Styles/variables" as vars
+
+.checkout-stepper
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 2rem
+
+    &__container
+        display: flex
+        align-items: center
+
+    &__icon-box
+        width: 50px
+        height: 50px
+        background: vars.$gray
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 4px
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+        transition: background 0.3s ease
+
+        &.active
+            background: vars.$h1-color
+            color: vars.$white
+
+    &__line
+        width: 40px
+        height: 8px
+        background: vars.$white

@@ -1,0 +1,28 @@
+@use "../../Styles/variables" as vars
+    
+.quantity-control
+    display: flex
+    align-items: center
+    overflow: hidden
+    height: 40px
+
+    &__quantity-btn
+        width: 48px
+        height: 48px
+        border: none
+        background: vars.$white
+        font-size: 22px
+        cursor: pointer
+        transition: background 0.2s ease
+
+    &__quantity-value
+        width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        text-align: center
+        align-items: center
+        border-radius: 4px
+        font-size: 16px
+        font-weight: 500
+        background: vars.$gray

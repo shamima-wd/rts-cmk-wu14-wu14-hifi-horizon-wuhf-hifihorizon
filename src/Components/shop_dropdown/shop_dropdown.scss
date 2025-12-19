@@ -1,0 +1,40 @@
+@use "../../Styles/_variables.sass" as vars;
+
+.shop-dropdown {
+  position: fixed;
+  position-anchor: --shop-anchor;
+  top: calc(anchor(bottom) + 2.4rem);
+  left: anchor(left);
+  border: none;
+  padding: 1rem;
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: vars.$black;
+    padding: 1rem 0;
+    text-transform: none;
+  }
+
+  &__categories {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__category-item {
+    cursor: pointer;
+    color: vars.$shop-dropdown-color;
+    font-weight: regular;
+    text-transform: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

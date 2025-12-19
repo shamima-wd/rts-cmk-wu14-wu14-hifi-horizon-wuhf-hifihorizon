@@ -1,0 +1,76 @@
+@use "../../../Styles/variables" as vars
+    
+.payment-method
+    background: vars.$white
+    padding: 2rem
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+
+    &__credit-card
+        display: flex
+        flex-direction: row
+        gap: 1rem
+        border-bottom: 1px solid vars.$gray
+        text-align: center
+        align-items: center
+        padding-bottom: 1rem
+        margin-bottom: 1rem
+
+        @media (max-width: 600px)
+            flex-direction: column
+            gap: 0.5rem
+
+    &__credit-card-logo
+        display: flex
+        align-items: center
+        gap: 0.5rem
+        span
+            svg
+                width: 40px
+                height: auto
+                margin-left: 0.5rem
+    
+    &__paypal
+        display: flex
+        align-items: center
+        gap: 1rem
+        flex-direction: row
+        border-bottom: 1px solid vars.$gray
+        padding-bottom: 1rem
+        margin-bottom: 1rem 
+
+        @media (max-width: 600px)
+            flex-direction: column
+            gap: 0.5rem
+    
+    &__paypal-icon
+        display: flex
+        align-items: center
+        gap: 0.5rem
+
+        svg
+            width: 40px
+            height: auto
+            margin-left: 0.5rem
+    
+    &__apple-pay
+        display: flex
+        align-items: center
+        gap: 1rem
+        flex-direction: row
+        border-bottom: 1px solid vars.$gray
+        padding-bottom: 1rem
+        margin-bottom: 1rem 
+
+        @media (max-width: 600px)
+            flex-direction: column
+            gap: 0.5rem
+    
+    &__apple-pay-icon
+        display: flex
+        align-items: center
+        gap: 0.5rem
+
+        svg
+            width: 40px
+            height: auto
+            margin-left: 0.5rem

@@ -1,0 +1,210 @@
+@use "./variables" as vars;
+@use "sass:color";
+
+.profile-page {
+  padding: 2rem vars.$default-padding-sides;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: vars.$background;
+  min-height: 60vh;
+
+  &__container {
+    background-color: vars.$white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+
+.profile-tabs {
+  display: flex;
+
+  &__tab {
+    flex: 1;
+    padding: 1rem;
+    background: vars.$gray;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: vars.$h1-color;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      background-color: vars.$black;
+    }
+
+    &--active {
+      color: vars.$black;
+      background-color: vars.$h1-color;
+      color: vars.$white;
+    }
+  }
+}
+
+.profile-content {
+  padding: 2rem;
+
+  &__title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: vars.$light-black;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  &__empty {
+    text-align: center;
+    color: #999;
+    padding: 3rem;
+    font-size: 0.95rem;
+  }
+
+  &__logout {
+    margin-top: 2rem;
+    background-color: vars.$button;
+    color: vars.$white;
+    border: none;
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgb(45, 45, 45, 0.4);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      background-color: color.adjust(vars.$button, $lightness: -8%);
+    }
+  }
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.profile-field {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 1rem;
+  @media (max-width: 600px) {
+    &--editing {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    color: vars.$light-black;
+    margin-top: 0.25rem;
+    min-width: 24px;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: vars.$light-black;
+  }
+
+  &__value {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  &__input {
+    width: fit-content;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__save,
+  &__cancel {
+    padding: 0.25rem 0.75rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+  }
+
+  &__save {
+    background-color: vars.$button;
+    color: vars.$white;
+
+    &:hover {
+      background-color: color.adjust(vars.$button, $lightness: -8%);
+    }
+  }
+
+  &__cancel {
+    background-color: vars.$button;
+    color: vars.$white;
+    &:hover {
+      background-color: color.adjust(vars.$button, $lightness: -8%);
+    }
+  }
+
+  &__edit {
+    background: none;
+    border: 1px solid vars.$gray;
+    border-radius: 2px;
+    color: vars.$light-black;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+    margin-top: 0.25rem;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 2px 4px rgb(45, 45, 45, 0.2);
+
+    &:hover {
+      color: vars.$black;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .profile-content {
+    padding: 1.5rem;
+  }
+
+  .profile-field {
+    gap: 0.75rem;
+
+    &__icon {
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use "../../Styles/variables" as vars
+
+.navbar__search
+    display: flex
+    align-items: center
+    flex-direction: row
+    padding: 4px 8px
+    background-color: vars.$gray
+    border-radius: 4px
+
+    input
+        width: 100%
+        border: none
+        outline: none
+        flex: 1
+        font-size: 14px
+        background-color: inherit
+        color: vars.$black
+
+    button
+        background: none
+        border: none
+        cursor: pointer
+
+.navbar__search-icon
+    color: vars.$black
+
+.navbar__search--desktop
+    @media (max-width: 600px)
+        display: none
+
+// Mobile Search Toggle
+.navbar__search-toggle
+    display: none
+    background: none
+    border: none
+    color: vars.$white
+    cursor: pointer
+
+    @media (max-width: 600px)
+        display: block
+
+    &--active
+        color: red
+
+// Collapsible Mobile Search Bar
+.navbar__search-mobile
+    width: 100%
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out
+
+    &--open
+        max-height: 60px
+        padding: 0.5rem 1rem
+        transition: max-height 0.3s ease-in, padding 0.3s ease-in
+
+    @media (min-width: 601px)
+        display: none
+
+    &-container
+        display: flex
+        align-items: center
+        width: 100%
+        padding: 4px 8px
+        background-color: vars.$gray
+        border-radius: 4px
+
+        input
+            width: 100%
+            border: none
+            outline: none
+            flex: 1
+            font-size: 14px
+            background-color: inherit
+            color: vars.$white
+            padding: 0

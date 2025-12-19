@@ -1,0 +1,85 @@
+@use "../../Styles/variables" as vars;
+
+.filter-item {
+  margin-bottom: 1rem;
+  width: 15rem;
+  background-color: vars.$gray;
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5em;
+    list-style-type: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.65rem;
+    input {
+      appearance: none;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    svg {
+      path {
+        fill: vars.$white;
+      }
+    }
+  }
+
+  &__price-inputs {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    input {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      border: none;
+      outline: none;
+      background: transparent;
+      border: 1px solid vars.$black;
+      width: 4.6rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+
+      // Remove spinner arrows
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    width: 1em; // or whatever size your icons are
+    height: 1em;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

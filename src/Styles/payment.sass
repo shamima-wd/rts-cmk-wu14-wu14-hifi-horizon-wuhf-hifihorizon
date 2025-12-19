@@ -1,0 +1,95 @@
+@use "../Styles/variables" as vars
+
+.payment-page
+    margin: 0 auto
+    padding: vars.$default-padding-top-bottom vars.$default-padding-sides
+
+    &__content
+        display: flex
+        gap: 2rem
+        align-items: flex-start
+
+        @media (max-width: 992px)
+            flex-direction: column
+    
+    &__left
+        flex: 2
+        display: flex
+        flex-direction: column
+        gap: 2rem
+
+    &__right
+        flex: 1
+        position: sticky
+        top: 20px
+
+    &__form-title, &__delivery-title, &__payment-method-title
+        h3
+            font-size: 1.5rem
+            font-weight: 600
+            color: vars.$h1-color
+            margin-bottom: 1rem
+
+    // Right side
+    &__overview
+        background: vars.$white
+        padding: 2rem
+        border-radius: 8px
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+
+        h2
+            color: vars.$h1-color
+            font-size: 1.25rem
+            margin-bottom: 1.5rem
+    
+    &__order-items-list
+        padding: 0
+        margin-bottom: 1rem
+
+    &__order-item
+        display: flex
+        justify-content: space-between
+        margin-bottom: 0.75rem
+        position: relative
+
+        span
+            font-size: 14px
+    
+    &__subtotal-row, &__total-row, &__cost-row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 0.5rem
+    
+    &__subtotal-row, &__total-row
+        justify-content: flex-end
+        gap: 1rem
+    
+    &__divider
+        border: 0
+        border-top: 1px solid vars.$gray
+        margin: 1.5rem 0
+
+    &__checkout-actions
+        margin-top: 1.5rem
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        font-size: 14px
+
+        label
+            display: flex
+            align-items: center
+            gap: 0.5rem
+
+    &__checkout-btn
+        margin-top: 1rem
+        background: vars.$button
+        color: vars.$white
+        border: none
+        padding: 12px
+        font-size: 1.1rem
+        font-weight: bold
+        border-radius: 4px
+        cursor: pointer
+        align-self: flex-end

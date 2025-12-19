@@ -1,0 +1,27 @@
+@use "../../../Styles/variables" as vars
+
+.about-us
+    background: vars.$black
+    color: vars.$white
+
+    &__content
+        max-width: 1200px
+        margin: 0 auto
+        padding: 4rem 2rem
+        display: flex
+        justify-content: space-between
+        gap: 15.125rem
+        flex-direction: row
+
+        @media (max-width: 900px)
+            flex-direction: column
+            gap: 2rem
+
+        h2
+            margin-bottom: 2.25rem
+
+    &__what-we-do, &__opening-hours
+        padding: 0 1rem
+
+    &__what-we-do
+        flex: 1

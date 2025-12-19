@@ -1,0 +1,50 @@
+@use "../../../Styles/variables" as vars
+
+.newsletter
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 4rem 2rem
+    background-color: vars.$background
+
+    &__content
+        background-color: vars.$white
+        padding: 2rem
+        width: 90%
+        text-align: center
+    
+    h2
+        text-transform: uppercase
+        font-weight: lighter
+    
+    p
+        font-size: 14px
+        margin-bottom: 25px
+
+    &__form
+        display: flex
+        justify-content: center
+        gap: 10px
+
+        input[type="email"]
+            padding: 10px
+            background-color: vars.$gray
+            border: none
+            flex: 0.5
+
+        button
+            background-color: vars.$button
+            color: vars.$white
+            border: none
+            padding: 10px 20px
+            cursor: pointer
+        
+        @media (max-width: 600px)
+            flex-direction: column
+
+            input[type="email"]
+                flex: none
+                width: 100%
+
+            button
+                width: 100%

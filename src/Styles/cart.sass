@@ -1,0 +1,53 @@
+@use "../Styles/variables" as vars
+    
+.cart-page
+    padding: vars.$default-padding-top-bottom vars.$default-padding-sides
+
+    &__items-list
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+        margin-bottom: 2rem
+
+    &__item-card
+        position: relative
+        display: grid
+        grid-template-columns: 100px 0.75fr 0.5fr 0.5fr
+        align-items: center
+        gap: 2rem
+        padding: 1.5rem
+        background: vars.$white
+        border-radius: 8px
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+
+        @media (max-width: 768px)
+            grid-template-columns: 1fr
+            gap: 1rem
+            text-align: center
+
+            img
+                margin: 0 auto
+    &__remove
+        position: absolute
+        top: 10px
+        right: 15px
+        background: none
+        border: none
+        font-size: 1.25rem
+        color: vars.$black
+        cursor: pointer
+
+    &__summary
+        display: flex
+        text-align: end
+        gap: 2rem
+        flex-direction: column
+
+        button
+            background: vars.$button
+            color: vars.$white
+            border: none
+            padding: 0.75rem 1.5rem
+            border-radius: 4px
+            cursor: pointer
+            font-size: 1rem
